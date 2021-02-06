@@ -1,0 +1,158 @@
+# Game Project
+
+# Lad Coder: DONH
+
+# Telegram: @pchoul
+
+# Have A Nice Game
+
+
+<Main>:
+
+
+    but_1: no
+    but_2: noSir
+
+    Button:
+        size_hint: (1, .498)
+        pos_hint: {"x":0,"y":0}
+        background_color: (0.8, 0.14, 0.18, 1) if self.state == 'normal' else (0.8, 0.14, 0.18, 1)
+        background_normal: ''
+        background_down: ''
+    Button:
+        size_hint: (1, .5)
+        pos_hint: {"x":0,"y":.502}
+        background_color: (0.25, 0.62, 0.98, 1) if self.state == 'normal' else (0.25, 0.62, 0.98, 1)
+        background_normal: ''
+        background_down: ''
+
+
+    Button:
+        id: no
+        size_hint: (.40, .08)
+        pos_hint: {"x":.30,"y":.15}
+        background_color: (0.8, 0.14, 0.18, 1) if self.state == 'normal' else (0.8, 0.14, 0.18, 1)
+        background_normal: ''
+        background_down: ''
+
+        on_release:
+            root.buts(1)
+
+        Image:
+            source: 'pl1.png'
+            y: self.parent.y
+            x: self.parent.x
+            size: self.parent.width, self.parent.height
+            allow_stretch: True
+
+
+
+
+    Button:
+        id: noSir
+        size_hint: (.40, .08)
+        pos_hint: {"x":.30,"y":.77}
+        background_color: (0.25, 0.62, 0.98, 1) if self.state == 'normal' else (0.25, 0.62, 0.98, 1)
+        background_normal: ''
+        background_down: ''
+
+        on_release:
+            root.buts(2)
+
+        Image:
+            source: 'pl2.png'
+            y: self.parent.y
+            x: self.parent.x
+            size: self.parent.width, self.parent.height
+            allow_stretch: True
+
+
+
+<Third>:
+
+    but1: but1
+    but2: but2
+
+    FloatLayout:
+
+        Button:
+            id: but1
+            size_hint: (1, .498)
+            pos_hint: {"x":0,"y":0}
+            background_color: (0.8, 0.14, 0.18, 1) if self.state == 'normal' else (0.8, 0.14, 0.18, 1)
+            background_normal: ''
+            background_down: ''
+
+            on_press:
+                root.logic(1)
+
+        Button:
+            id: but2
+            size_hint: (1, .498)
+            pos_hint: {"x":0,"y":.502}
+            background_color: (0.25, 0.62, 0.98, 1) if self.state == 'normal' else (0.25, 0.62, 0.98, 1)
+            background_normal: ''
+            background_down: ''
+
+            on_press:
+                root.logic(2)
+
+<Fourth>:
+
+    FloatLayout:
+        Button:
+            size_hint: (1, 1)
+            pos_hint: {"x":0,"y":0}
+            background_color: (0.8, 0.14, 0.18, 1) if self.state == 'normal' else (0.8, 0.14, 0.18, 1)
+            background_normal: ''
+            background_down: ''
+            on_press:
+                root.manager.current='first'
+
+        Button:
+            size_hint: (.40, .08)
+            pos_hint: {"x":.30,"y":.15}
+            background_color: (0.8, 0.14, 0.18, 1) if self.state == 'normal' else (0.8, 0.14, 0.18, 1)
+            background_normal: ''
+            background_down: ''
+
+            on_press:
+                root.manager.current='first'
+
+            Image:
+                source: 'win1r.png'
+                y: self.parent.y
+                x: self.parent.x
+                size: self.parent.width, self.parent.height
+                allow_stretch: True
+
+<Five>:
+
+    FloatLayout:
+        Button:
+            #size_hint: (1, 1)
+            pos_hint: {"x":0,"y":0}
+            background_color: (0.25, 0.62, 0.98, 1) if self.state == 'normal' else (0.25, 0.62, 0.98, 1)
+            background_normal: ''
+            background_down: ''
+            on_press:
+                root.manager.current='first'
+
+        Button:
+            size_hint: (.40, .08)
+            pos_hint: {"x":.30,"y":.77}
+            background_color: (0.25, 0.62, 0.98, 1) if self.state == 'normal' else (0.25, 0.62, 0.98, 1)
+            background_normal: ''
+            background_down: ''
+
+            on_press:
+                root.manager.current='first'
+
+            Image:
+                source: 'win2r.png'
+                y: self.parent.y
+                x: self.parent.x
+                size: self.parent.width, self.parent.height
+                allow_stretch: True
+
+
